@@ -7,7 +7,9 @@ void* operator new(size_t size) noexcept(false) {
     return ptr;
 }
 
-void init_alloc(size_t size) { init_allocator(size);}
+void init_alloc(size_t size) { 
+  init_allocator(size);
+}
 
 void* operator new[](size_t size) noexcept(false) {
     void* ptr = allocate_localy(size);
